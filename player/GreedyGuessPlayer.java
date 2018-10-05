@@ -29,7 +29,7 @@ public class GreedyGuessPlayer extends Guesser implements Player{
         enumerateGuesses(checkerBoardGuesses);
     } // end of initialisePlayer()
 
-        private void enumerateGuesses(List<Guess> list) {
+    private void enumerateGuesses(List<Guess> list) {
         for(int row = 0; row < myWorld.numRow; ++row){
             for(int col = row%2; col < myWorld.numColumn; col+=2){
                 Guess g = new Guess();
@@ -99,6 +99,11 @@ public class GreedyGuessPlayer extends Guesser implements Player{
             index = random.nextInt(1000) % checkerBoardGuesses.size();
         }
         return checkerBoardGuesses.remove(index);
+
+        //if hit (isHit == true) go to ** Targeting mode **
+
+        //if not hit (isHit != true) stay at ** Hunting mode **
+
         // dummy return
         //return null;
     } // end of makeGuess()
