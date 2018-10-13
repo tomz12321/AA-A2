@@ -61,7 +61,7 @@ public class World {
     // True if visualisation switch is on.
     boolean isVisual = false;
 
-    // To calculate the steps of coordinates in each direction.
+    // To calculate the steps of coordinates in each direction. //N+1, S-1, E+1, W-1
     static final String dirs = "NWSENESW";
     static final int rowDeltas[] = {1, 0, -1, 0, 1, 0, -1, 0};
     static final int clnDeltas[] = {0, -1, 0, 1, 1, 0, -1, 0};
